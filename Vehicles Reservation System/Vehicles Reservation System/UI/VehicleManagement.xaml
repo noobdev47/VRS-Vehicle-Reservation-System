@@ -1,0 +1,61 @@
+﻿<Controls:MetroWindow x:Class="Vehicles_Reservation_System.UI.VehicleManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        TitleCaps="False"
+        Title="VRS-Vehicle Management" Height="348" Width="787">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="156" VerticalAlignment="Top" Width="100">
+            <TabItem x:Name="tabDelete" Header="Delete" Loaded="tabDelete_Loaded">
+                <Grid Margin="106,-130,-681,-160">
+                    <Label Content="Registration No" Margin="203,126,0,156" HorizontalAlignment="Left" Width="93"/>
+                    <ComboBox x:Name="cmbxVehicleRegNo" HorizontalAlignment="Left" Margin="330,126,0,0" VerticalAlignment="Top" Width="142"/>
+                    <Button x:Name="btnBack1" Content="Back" HorizontalAlignment="Left" Margin="155,247,0,0" VerticalAlignment="Top" Width="113" Click="btnBack1_Click"/>
+                    <Button x:Name="btnDelete" Content="Proceed" HorizontalAlignment="Left" Margin="416,247,0,0" VerticalAlignment="Top" Width="113" Click="btnDelete_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabAdd" Header="Add" Loaded="tabAdd_Loaded">
+                <Grid Margin="103,-134,-679,-158">
+                    <Label x:Name="lblVehicleNo" Content=" Vehicle No" HorizontalAlignment="Left" Margin="52,20,0,0" VerticalAlignment="Top" Width="83"/>
+                    <TextBox x:Name="txtVehicleNo" HorizontalAlignment="Left" Height="23" Margin="179,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" IsEnabled="False"/>
+                    <Label x:Name="lblVehicleNo_Copy" Content="Vehicle Name" HorizontalAlignment="Left" Margin="52,79,0,0" VerticalAlignment="Top" Width="83"/>
+                    <TextBox x:Name="txtVehicleName" HorizontalAlignment="Left" Height="23" Margin="179,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146"/>
+                    <Label x:Name="lblVehicleColor" Content="Color" HorizontalAlignment="Left" Margin="72,141,0,0" VerticalAlignment="Top" Width="42"/>
+                    <TextBox x:Name="txtVehicleColor" HorizontalAlignment="Left" Height="23" Margin="179,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146"/>
+                    <Label x:Name="lblVehicleNo_Copy1" Content="Category" HorizontalAlignment="Left" Margin="62,194,0,0" VerticalAlignment="Top" Width="61"/>
+                    <ComboBox x:Name="cmbxCategory" HorizontalAlignment="Left" Margin="179,194,0,0" VerticalAlignment="Top" Width="146">
+                        <ComboBoxItem Content="Sedan"/>
+                        <ComboBoxItem Content="Hybrid"/>
+                        <ComboBoxItem Content="Jeep"/>
+                    </ComboBox>
+                    <Label x:Name="lblVehicleInsuranceNo" Content="Insurance No" HorizontalAlignment="Left" Margin="386,19,0,0" VerticalAlignment="Top" Width="81"/>
+                    <TextBox x:Name="txtVehicleInsuranceNo" HorizontalAlignment="Left" Height="23" Margin="492,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
+                    <Label x:Name="lblVehicleRegNo" Content="Reg No" HorizontalAlignment="Left" Margin="403,79,0,0" VerticalAlignment="Top" Width="50"/>
+                    <TextBox x:Name="txtVehicleRegNo" HorizontalAlignment="Left" Height="23" Margin="492,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
+                    <Label x:Name="lblVehicleRatePerDay" Content=" Rate/Day" HorizontalAlignment="Left" Margin="397,140,0,0" VerticalAlignment="Top" Width="70"/>
+                    <TextBox x:Name="txtVehicleRatePerDay" HorizontalAlignment="Left" Height="23" Margin="492,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141"/>
+                    <Label x:Name="lblMfgDate" Content="Mfg Date" HorizontalAlignment="Left" Margin="403,199,0,0" VerticalAlignment="Top" Width="61"/>
+                    <DatePicker x:Name="datePickerMfg" HorizontalAlignment="Left" Margin="492,198,0,0" VerticalAlignment="Top" Width="141"/>
+                    <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="197,256,0,0" VerticalAlignment="Top" Width="107" Click="btnBack_Click"/>
+                    <Button x:Name="btnInsert" Content="Proceed" HorizontalAlignment="Left" Margin="403,256,0,0" VerticalAlignment="Top" Width="107" Click="btnInsert_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabUpdate" Header="Update" HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="100" Loaded="tabUpdate_Loaded">
+                <Grid Margin="109,-131,-679,-162">
+                    <Label x:Name="lblRegNo" Content="Registration No" Margin="175,34,0,251" HorizontalAlignment="Left" Width="93"/>
+                    <ComboBox x:Name="cmbxVehicleRegNo1" HorizontalAlignment="Left" Margin="318,34,0,0" VerticalAlignment="Top" Width="142" SelectionChanged="cmbxVehicleRegNo1_SelectionChanged"/>
+                    <Button x:Name="btnBack2" Content="Back" HorizontalAlignment="Left" Margin="186,221,0,0" VerticalAlignment="Top" Width="113" Click="btnBack2_Click"/>
+                    <Button x:Name="btnUpdate" Content="Proceed" HorizontalAlignment="Left" Margin="386,221,0,0" VerticalAlignment="Top" Width="113" Click="btnUpdate_Click"/>
+                    <Label x:Name="lblStatus" Content="Status" Margin="200,88,0,197" HorizontalAlignment="Left" Width="43"/>
+                    <TextBox x:Name="txtUpdateStatus" HorizontalAlignment="Left" Height="23" Margin="318,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" IsEnabled="False"/>
+                    <RadioButton Name="rdoBtnAvailable" GroupName="status" Content="Available" HorizontalAlignment="Left" Margin="404,147,0,0" VerticalAlignment="Top"/>
+                    <RadioButton Name="rdoBtnReserved" GroupName="status" Content="Reserved" HorizontalAlignment="Left" Margin="318,147,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblStatus_Copy" Content="Change Status" Margin="179,142,0,143" HorizontalAlignment="Left" Width="88"/>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+
+    </Grid>
+</Controls:MetroWindow>

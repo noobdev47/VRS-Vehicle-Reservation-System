@@ -1,0 +1,18 @@
+﻿<Controls:MetroWindow x:Name="AdminDashboard_Window"  x:Class="Vehicles_Reservation_System.UI.AdminDashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        TitleCaps="False"
+        Title="VRS-Admin Dashboard" Height="228" Width="517" Loaded="AdminDashboard_Window_Loaded">
+    <Grid>
+        <DockPanel HorizontalAlignment="Left" Height="27" LastChildFill="False" VerticalAlignment="Top" Width="509">
+            <Label x:Name="lblLoggedIn" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" DockPanel.Dock="Right" Height="27"/>
+            <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Width="75" DockPanel.Dock="Left" Margin="0" BorderThickness="0" Background="{x:Null}" Click="btnLogout_Click"/>
+            <Button x:Name="btnManager" Content="Manager" Width="75" BorderThickness="0" Background="{x:Null}" Click="btnManager_Click"/>
+            <Button x:Name="btnEntryOp" Content="Entry Operator" Width="98" BorderThickness="0" Background="{x:Null}" Click="btnEntryOp_Click"/>
+        </DockPanel>
+        <Label x:Name="lblAdminMessage" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Choose an Employee to Proceed" Margin="87,85,0,0" FontSize="20" FontFamily="Corbel Light" IsEnabled="False" Background="{x:Null}" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="333"/>
+
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,61 @@
+﻿<Controls:MetroWindow x:Name="CustomerManagement_Window" x:Class="Vehicles_Reservation_System.UI.CustomerManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        TitleCaps="False"
+        Title="CustomerManagement" Height="300" Width="787" ResizeMode="CanMinimize" Loaded="CustomerManagementWindow_Loaded">
+    <Grid>
+        <TabControl x:Name="managerTab" HorizontalAlignment="Left" Height="269" VerticalAlignment="Top" Width="111">
+            <TabItem Header="Update" x:Name="tabUpdate" Loaded="tabUpdate_Loaded">
+                <Grid  Margin="115,-116,-669,-2">
+                    <Label x:Name="lblCustomerNo1" Content="Customer No" HorizontalAlignment="Left" Margin="60,37,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblCustomerName1" Content="Name" HorizontalAlignment="Left" Margin="60,84,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblCustomerAddress1" Content="Address" HorizontalAlignment="Left" Margin="60,126,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtCustomerName1" HorizontalAlignment="Left" Height="25" Margin="160,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+                    <Label x:Name="lblCustomerCnic1" Content="CNIC" HorizontalAlignment="Left" Margin="359,37,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="btnInsert1" Content="Proceed" Margin="459,216,22,0" VerticalAlignment="Top" Click="btnInsert1_Click"/>
+                    <Button x:Name="btnBack3" Content="Back" Margin="160,216,321,0" VerticalAlignment="Top" Click="btnBack3_Click"/>
+                    <TextBox x:Name="txtCustomerAddress1" HorizontalAlignment="Left" Height="75" Margin="160,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+                    <TextBox x:Name="txtCustomerCnic1" HorizontalAlignment="Left" Height="25" Margin="459,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+                    <Label x:Name="lblCustomerLicenseNo1" Content="License No" HorizontalAlignment="Left" Margin="359,84,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtCustomerLicenseNo1" HorizontalAlignment="Left" Height="25" Margin="459,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+                    <TextBox x:Name="txtCustomerContact1" HorizontalAlignment="Left" Height="25" Margin="459,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+                    <Label x:Name="lblCustomerContact1" Content="Contact" HorizontalAlignment="Left" Margin="359,126,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblCustomerDoB1" Content="Date Of Birth" HorizontalAlignment="Left" Margin="359,175,0,0" VerticalAlignment="Top"/>
+                    <DatePicker x:Name="datePicker1" HorizontalAlignment="Left" Margin="459,176,0,0" VerticalAlignment="Top" Width="178"/>
+                    <ComboBox x:Name="cmbxCustomerNo" HorizontalAlignment="Left" Margin="208,37,0,0" VerticalAlignment="Top" Width="76" SelectionChanged="cmbxCustomerNo_SelectionChanged"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabRemove" Header="Remove" Loaded="tabRemove_Loaded">
+                <Grid Margin="114,-117,-669,-1">
+                    <Label x:Name="lblCustomerUname1" Content="Name" HorizontalAlignment="Left" Margin="124,103,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="btnDelete" Content="Proceed" Margin="361,199,0,0" VerticalAlignment="Top" Click="btnDelete_Click" HorizontalAlignment="Left" Width="168"/>
+                    <ComboBox x:Name="cmbxCustomerName" Margin="263,103,263,0" VerticalAlignment="Top" SelectionChanged="cmbxCustomerName_SelectionChanged"/>
+                    <Button x:Name="btnBack2" Content="back" Margin="124,199,0,0" VerticalAlignment="Top" Click="btnBack2_Click" HorizontalAlignment="Left" Width="174"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabAdd" Header="Add" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <Grid Margin="114,-119,-669,0">
+                    <Label x:Name="lblCustomerNo" Content="Customer No" HorizontalAlignment="Left" Margin="60,37,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblCustomerName" Content="Name" HorizontalAlignment="Left" Margin="60,84,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblCustomerAddress" Content="Address" HorizontalAlignment="Left" Margin="60,126,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtCustomerNo" HorizontalAlignment="Left" Height="25" Margin="160,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Focusable="False" IsEnabled="False"/>
+                    <TextBox x:Name="txtCustomerName" HorizontalAlignment="Left" Height="25" Margin="160,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+                    <Label x:Name="lblCustomerCnic" Content="CNIC" HorizontalAlignment="Left" Margin="359,37,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="btnInsert" Content="Proceed" Margin="459,216,23,0" VerticalAlignment="Top" Click="btnInsert_Click"/>
+                    <Button x:Name="btnBack1" Content="Back" Margin="160,216,322,0" VerticalAlignment="Top" Click="btnBack1_Click"/>
+                    <TextBox x:Name="txtCustomerAddress" HorizontalAlignment="Left" Height="75" Margin="160,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+                    <TextBox x:Name="txtCustomerCnic" HorizontalAlignment="Left" Height="25" Margin="459,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+                    <Label x:Name="lblCustomerLicenseNo" Content="License No" HorizontalAlignment="Left" Margin="359,84,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtCustomerLicenseNo" HorizontalAlignment="Left" Height="25" Margin="459,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+                    <TextBox x:Name="txtCustomerContact" HorizontalAlignment="Left" Height="25" Margin="459,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+                    <Label x:Name="lblCustomerContact" Content="Contact" HorizontalAlignment="Left" Margin="359,126,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblCustomerDoB" Content="Date Of Birth" HorizontalAlignment="Left" Margin="359,175,0,0" VerticalAlignment="Top"/>
+                    <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="459,176,0,0" VerticalAlignment="Top" Width="178"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="Vehicles_Reservation_System.MainAdmin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="home" Height="543" Width="1001.5">
+    <Grid >
+        <DataGrid Name="dataGridView1" Height="200" Width="971" Margin="-7,295,12,24" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+            <DataGrid.Columns></DataGrid.Columns>
+        </DataGrid>
+        <GroupBox Margin="0,0,15,224" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+            <GroupBox.Header>
+                <TextBlock Text="SEARCH CAR AVAILABLE OR NOT"/>
+            </GroupBox.Header>
+            <Canvas Height="137" Width="956" >
+                <Label Name="lblavailable" Height="24" Width="9" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="7" Margin="339,38,628,457" HorizontalAlignment="Right" VerticalAlignment="Bottom" ></Label>
+                <Button Name="btncussearch" Height="38" Width="110" TabIndex="6" Margin="654,81,212,400" HorizontalAlignment="Right" VerticalAlignment="Bottom" >SERACH</Button>
+                <ComboBox Name="cmbcus" Height="23" Width="163" TabIndex="5" Margin="727,30,86,466" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                <Label Name="label3" Height="24" Width="136" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="4" Margin="564,33,276,462" HorizontalAlignment="Right" VerticalAlignment="Bottom" >CUSTOMER NAME</Label>
+                <Label Name="label2" Height="24" Width="9" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="3" Margin="512,38,455,457" HorizontalAlignment="Right" VerticalAlignment="Bottom" ></Label>
+                <Button Name="btnser" Height="38" Width="110" TabIndex="2" Margin="96,81,770,400" HorizontalAlignment="Right" VerticalAlignment="Bottom" >SERACH</Button>
+                <ComboBox Name="cmbcarname" Height="23" Width="155" TabIndex="1" Margin="153,30,668,466" HorizontalAlignment="Right" VerticalAlignment="Bottom" />
+                <Label Name="label1" Height="24" Width="136" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="0" Margin="20,33,820,462" HorizontalAlignment="Right" VerticalAlignment="Bottom" >ENTER CAR NAME</Label>
+            </Canvas>
+        </GroupBox>
+        <Canvas Name="panel1" Height="126" Width="971" Margin="-7,-3,12,396" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+            <Button Name="btncar" Height="64" Width="164" TabIndex="5" Margin="787,23,25,432" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="btncar_Click" >Car Management</Button>
+            <Button Name="button1" Height="62" Width="130" TabIndex="0" Margin="6,28,840,429" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Vehicle Category</Button>
+            <Button x:Name="btnCustomer" Height="62" Width="165" TabIndex="6" Margin="142,26,669,431" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="btnCustomer_Click" >Customer Management</Button>
+            <Button Name="button3" Height="62" Width="145" TabIndex="2" Margin="634,25,197,432" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Chek</Button>
+            <Button x:Name="btnBooking" Height="62" Width="164" TabIndex="4" Margin="313,26,499,431" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="btnBooking_Click" >Booking Management</Button>
+            <Button Name="btndeal" Height="62" Width="145" TabIndex="3" Margin="483,25,348,432" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Deal Settlement</Button>
+        </Canvas>
+    </Grid>
+</Window>

@@ -1,0 +1,21 @@
+﻿<Controls:MetroWindow x:Name="ManagerDashboard_Window" x:Class="Vehicles_Reservation_System.UI.ManagerDashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        TitleCaps="False"
+        Title="VRS-Manager Dashboard" Height="228" Width="738" ResizeMode="CanMinimize" Loaded="ManagerDashboard_Window_Loaded">
+    <Grid>
+        <DockPanel HorizontalAlignment="Left" Height="27" LastChildFill="False" VerticalAlignment="Top" Width="732">
+            <Label x:Name="lblLoggedIn" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" DockPanel.Dock="Right" Height="27"/>
+            <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Width="75" DockPanel.Dock="Left" Margin="0" BorderThickness="0" Background="{x:Null}" Click="btnLogout_Click"/>
+            <Button x:Name="btnViewAdmins" Content="View Admins" Width="82" BorderThickness="0" Background="{x:Null}" Click="btnViewAdmins_Click"/>
+            <Button x:Name="btnViewEntryOps" Content="View Entry Operators" Width="133" BorderThickness="0" Background="{x:Null}" Click="btnViewEntryOps_Click"/>
+            <Button x:Name="btnGenerateReport" Content="View Report" BorderThickness="0" Background="{x:Null}" Click="btnGenerateReport_Click" DockPanel.Dock="Left" Width="85"/>
+            <Button x:Name="btnViewCars" Content="Vehicles" Height="27" VerticalAlignment="Top" Width="75" BorderThickness="0" Background="{x:Null}" Click="btnViewCars_Click"/>
+            <Button x:Name="btnViewBookings" Content="View Bookings" Height="27" VerticalAlignment="Top" Width="92" BorderThickness="0" Background="{x:Null}" Click="btnViewBookings_Click"/>
+        </DockPanel>
+        <Label x:Name="lblAdminMessage" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Choose a Service to Proceed" Margin="161,83,161,0" FontSize="20" FontFamily="Corbel Light" IsEnabled="False" Background="{x:Null}" Height="40" VerticalAlignment="Top"/>
+
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,17 @@
+﻿<Controls:MetroWindow x:Name="MainWindow1" x:Class="Vehicles_Reservation_System.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Background="{DynamicResource WindowBackgroundBrush}"
+        TitleCaps="False"
+        Title="Vehicle Reservation System" Height="250" Width="617.91" ResizeMode="CanMinimize">
+    <Grid>
+        <Label Content="Vehicle Reservation System" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="168,48,167,0" VerticalAlignment="Top" Height="55" FontFamily="Corbel Light" FontSize="22" IsEnabled="False"/>
+        <DockPanel HorizontalAlignment="Left" Height="61" LastChildFill="False" Margin="10,117,0,0" VerticalAlignment="Top" Width="590">
+            <Button x:Name="btnAdminDashboard" Content="Admin Dashboard" Height="61" VerticalAlignment="Top" Width="186" BorderThickness="0" Background="{x:Null}" Click="btnAdminDashboard_Click"/>
+            <Button x:Name="btnEntryOperatorDashboard" Content="Entry Operator Dashboard" Height="61" VerticalAlignment="Top" Width="213" BorderThickness="0" Background="{x:Null}" Click="btnEntryOperatorDashboard_Clicked"/>
+            <Button x:Name="btnManagerDashboard" Content="Manager DashBoard" Height="61" VerticalAlignment="Top" Width="192" BorderThickness="0" Background="{x:Null}" Click="btnManagerDashboard_Click"/>
+        </DockPanel>
+
+    </Grid>
+</Controls:MetroWindow>

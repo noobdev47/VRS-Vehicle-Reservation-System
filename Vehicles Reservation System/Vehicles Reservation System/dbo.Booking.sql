@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[Booking] (
+    [BOOKING__ID]  INT        NOT NULL,
+    [CUSTOMER_ID]  INT        NOT NULL,
+    [CAR_ID]       INT        NOT NULL,
+    [BOOKING_DATE] DATE       NOT NULL,
+    [AMOUNT_DUE]   FLOAT (53) NOT NULL,
+    [RETURN_DATE]  DATE       NOT NULL,
+    PRIMARY KEY CLUSTERED ([BOOKING__ID] ASC),
+    CONSTRAINT [FK_Booking_ToCustomer] FOREIGN KEY ([CUSTOMER_ID]) REFERENCES [dbo].[Customer] ([CUSTOMER_ID]),
+    CONSTRAINT [FK_Booking_ToCar] FOREIGN KEY ([CAR_ID]) REFERENCES [dbo].[Car] ([CAR_ID])
+);
+
